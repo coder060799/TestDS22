@@ -11,7 +11,8 @@ services:
       - GITLAB_REGISTRY_API_URL=http://registry.dig-skills.ga:5000
       - GITLAB_REGISTRY_KEY_PATH=/certs/registry.key
       GITLAB_OMNIBUS_CONFIG: |
-        external_url 'https://gitlab.dig-skills.ga'
+        external_url 'https://gitlab.dig-skills.ga';
+        gitlab_rails['initial_root_password'] = 'P@ssw0rd';
     ports:
       - '80:80'
       - '443:443'
